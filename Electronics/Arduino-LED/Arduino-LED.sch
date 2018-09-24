@@ -1,0 +1,299 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L GND #PWR1
+U 1 1 5BA8C647
+P 3500 4800
+F 0 "#PWR1" H 3500 4550 50  0001 C CNN
+F 1 "GND" H 3500 4650 50  0000 C CNN
+F 2 "" H 3500 4800 50  0001 C CNN
+F 3 "" H 3500 4800 50  0001 C CNN
+	1    3500 4800
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED_CRGB D1
+U 1 1 5BA8C717
+P 3800 4200
+F 0 "D1" H 3800 4570 50  0000 C CNN
+F 1 "LED_CRGB" H 3800 3850 50  0000 C CNN
+F 2 "" H 3800 4150 50  0001 C CNN
+F 3 "" H 3800 4150 50  0001 C CNN
+	1    3800 4200
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED_CRGB D2
+U 1 1 5BA8C7B2
+P 4650 4200
+F 0 "D2" H 4650 4570 50  0000 C CNN
+F 1 "LED_CRGB" H 4650 3850 50  0000 C CNN
+F 2 "" H 4650 4150 50  0001 C CNN
+F 3 "" H 4650 4150 50  0001 C CNN
+	1    4650 4200
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED_CRGB D3
+U 1 1 5BA8C7E7
+P 5550 4200
+F 0 "D3" H 5550 4570 50  0000 C CNN
+F 1 "LED_CRGB" H 5550 3850 50  0000 C CNN
+F 2 "" H 5550 4150 50  0001 C CNN
+F 3 "" H 5550 4150 50  0001 C CNN
+	1    5550 4200
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED_CRGB D4
+U 1 1 5BA8C83A
+P 6400 4200
+F 0 "D4" H 6400 4570 50  0000 C CNN
+F 1 "LED_CRGB" H 6400 3850 50  0000 C CNN
+F 2 "" H 6400 4150 50  0001 C CNN
+F 3 "" H 6400 4150 50  0001 C CNN
+	1    6400 4200
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED_CRGB D5
+U 1 1 5BA8C869
+P 7250 4200
+F 0 "D5" H 7250 4570 50  0000 C CNN
+F 1 "LED_CRGB" H 7250 3850 50  0000 C CNN
+F 2 "" H 7250 4150 50  0001 C CNN
+F 3 "" H 7250 4150 50  0001 C CNN
+	1    7250 4200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3600 4200 3500 4200
+Wire Wire Line
+	3500 4200 3500 4800
+Wire Wire Line
+	3500 4700 7050 4700
+Wire Wire Line
+	7050 4700 7050 4200
+Connection ~ 3500 4700
+Wire Wire Line
+	6200 4200 6200 4700
+Connection ~ 6200 4700
+Wire Wire Line
+	5350 4200 5350 4700
+Connection ~ 5350 4700
+Wire Wire Line
+	4450 4200 4450 4700
+Connection ~ 4450 4700
+Text GLabel 4100 3550 1    60   Input ~ 0
+io4
+Text GLabel 4350 3550 1    60   Input ~ 0
+io5
+Text GLabel 5000 3550 1    60   Input ~ 0
+io6
+Text GLabel 5250 3550 1    60   Input ~ 0
+io7
+Text GLabel 5900 3550 1    60   Input ~ 0
+io8
+Text GLabel 6150 3550 1    60   Input ~ 0
+io9
+Text GLabel 6700 3550 1    60   Input ~ 0
+io10
+Text GLabel 6950 3550 1    60   Input ~ 0
+io11
+Text GLabel 7600 3550 1    60   Input ~ 0
+io12
+Text GLabel 7850 3550 1    60   Input ~ 0
+io13
+$Comp
+L R R1
+U 1 1 5BA8C979
+P 4100 3750
+F 0 "R1" V 4180 3750 50  0000 C CNN
+F 1 "1.6K" V 4100 3750 50  0000 C CNN
+F 2 "" V 4030 3750 50  0001 C CNN
+F 3 "" H 4100 3750 50  0001 C CNN
+	1    4100 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R2
+U 1 1 5BA8C99E
+P 4350 3750
+F 0 "R2" V 4430 3750 50  0000 C CNN
+F 1 "1.6K" V 4350 3750 50  0000 C CNN
+F 2 "" V 4280 3750 50  0001 C CNN
+F 3 "" H 4350 3750 50  0001 C CNN
+	1    4350 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R3
+U 1 1 5BA8C9C3
+P 5000 3750
+F 0 "R3" V 5080 3750 50  0000 C CNN
+F 1 "1.6K" V 5000 3750 50  0000 C CNN
+F 2 "" V 4930 3750 50  0001 C CNN
+F 3 "" H 5000 3750 50  0001 C CNN
+	1    5000 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R4
+U 1 1 5BA8CA16
+P 5250 3750
+F 0 "R4" V 5330 3750 50  0000 C CNN
+F 1 "1.6K" V 5250 3750 50  0000 C CNN
+F 2 "" V 5180 3750 50  0001 C CNN
+F 3 "" H 5250 3750 50  0001 C CNN
+	1    5250 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R5
+U 1 1 5BA8CA3F
+P 5900 3750
+F 0 "R5" V 5980 3750 50  0000 C CNN
+F 1 "1.6K" V 5900 3750 50  0000 C CNN
+F 2 "" V 5830 3750 50  0001 C CNN
+F 3 "" H 5900 3750 50  0001 C CNN
+	1    5900 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R6
+U 1 1 5BA8CA6E
+P 6150 3750
+F 0 "R6" V 6230 3750 50  0000 C CNN
+F 1 "1.6K" V 6150 3750 50  0000 C CNN
+F 2 "" V 6080 3750 50  0001 C CNN
+F 3 "" H 6150 3750 50  0001 C CNN
+	1    6150 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R7
+U 1 1 5BA8CA99
+P 6700 3750
+F 0 "R7" V 6780 3750 50  0000 C CNN
+F 1 "1.6K" V 6700 3750 50  0000 C CNN
+F 2 "" V 6630 3750 50  0001 C CNN
+F 3 "" H 6700 3750 50  0001 C CNN
+	1    6700 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R8
+U 1 1 5BA8CAC6
+P 6950 3750
+F 0 "R8" V 7030 3750 50  0000 C CNN
+F 1 "1.6K" V 6950 3750 50  0000 C CNN
+F 2 "" V 6880 3750 50  0001 C CNN
+F 3 "" H 6950 3750 50  0001 C CNN
+	1    6950 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R9
+U 1 1 5BA8CAF5
+P 7600 3750
+F 0 "R9" V 7680 3750 50  0000 C CNN
+F 1 "1.6K" V 7600 3750 50  0000 C CNN
+F 2 "" V 7530 3750 50  0001 C CNN
+F 3 "" H 7600 3750 50  0001 C CNN
+	1    7600 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R10
+U 1 1 5BA8CB26
+P 7850 3750
+F 0 "R10" V 7930 3750 50  0000 C CNN
+F 1 "1.6K" V 7850 3750 50  0000 C CNN
+F 2 "" V 7780 3750 50  0001 C CNN
+F 3 "" H 7850 3750 50  0001 C CNN
+	1    7850 3750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4000 4000 4100 4000
+Wire Wire Line
+	4100 4000 4100 3900
+Wire Wire Line
+	4350 3900 4350 4200
+Wire Wire Line
+	4350 4200 4000 4200
+Wire Wire Line
+	4850 4000 5000 4000
+Wire Wire Line
+	5000 4000 5000 3900
+Wire Wire Line
+	4850 4200 5250 4200
+Wire Wire Line
+	5250 4200 5250 3900
+Wire Wire Line
+	5750 4000 5900 4000
+Wire Wire Line
+	5900 4000 5900 3900
+Wire Wire Line
+	5750 4200 6150 4200
+Wire Wire Line
+	6150 4200 6150 3900
+Wire Wire Line
+	6600 4000 6700 4000
+Wire Wire Line
+	6700 4000 6700 3900
+Wire Wire Line
+	6600 4200 6950 4200
+Wire Wire Line
+	6950 4200 6950 3900
+Wire Wire Line
+	7450 4000 7600 4000
+Wire Wire Line
+	7600 4000 7600 3900
+Wire Wire Line
+	7450 4200 7850 4200
+Wire Wire Line
+	7850 4200 7850 3900
+$EndSCHEMATC

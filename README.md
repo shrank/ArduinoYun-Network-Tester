@@ -1,5 +1,6 @@
 # ArduinoYun-Network-Tester
 Simple battery-powered Netowork tester built on ArduinoYun and Python
+![alt text](https://github.com/shrank/ArduinoYun-Network-Tester/blob/master/Electronics/Pictures/ArduinoYun-Network-Tester-Front.JPG "NetworkTester Front")
 
 ## The idea..
 ..is to build a handheld Network Tester that can run complex tests while givin a simple God/Bad indicator. The NetworkTester provides 5 two-colored LEDs to display the test-results. The tests themselfs are written in python and run on the linux part of the ArduinoYun.

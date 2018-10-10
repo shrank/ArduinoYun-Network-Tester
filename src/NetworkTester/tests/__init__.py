@@ -7,6 +7,12 @@ class genericTest:
 	def test(self):
 		return 0		
 
+class extTest(genericTest):
+	def __init__(self):
+		genericTest.__init__(self)
+		self.cmd=""
+	def read(self,returncode,ouput,error):
+		pass
 
 class mcastTest(genericTest):
 	def __init__(self):

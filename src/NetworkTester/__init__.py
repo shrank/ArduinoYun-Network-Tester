@@ -104,9 +104,8 @@ if __name__ == '__main__':
 	from tests import Ping
 	app=Tester()
 	app.addTest(Ping.testPing("126.0.0.1",4),0)
-#	app.addTest(Ping.testPing("126.0.0.1"),1)
-#	app.addTest(Audio.testLake(),2)
-#	app.addTest(Lights.testACN(),3)
+	app.addTest(Audio.testLake(),2)
+	app.addTest(Lights.testACN(),3)
 	res=app.run()
 	print(res)
 	time.sleep(10)

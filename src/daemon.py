@@ -1,7 +1,7 @@
 #!/usr/bin/python
 
 from NetworkTester import Tester
-from NetworkTester.tests import Audio, Lights 
+from NetworkTester.tests import Audio, Lights, Ping 
 import traceback
 from bridge.bridgeclient import BridgeClient as bridgeclient
 
@@ -11,7 +11,8 @@ from bridge.bridgeclient import BridgeClient as bridgeclient
 
 app=Tester()
 app.interface="eth1"
-app.addTest(Audio.testPTP(),0)
+app.addTest(Ping.testPing("99.99.99.99",10),0)
+#app.addTest(Audio.testDante(),1)
 app.addTest(Audio.testDante(),1)
 app.addTest(Audio.testLake(),2)
 app.addTest(Lights.testACN(),3)

@@ -11,6 +11,7 @@ do
 rm -rf ${basedir}etc/config/$f
 done
 
+cp files/image-info ${basedir}
 cp files/network ${basedir}etc/config/network
 cp files/boot ${basedir}etc/init.d/boot
 cp files/done ${basedir}etc/init.d/done

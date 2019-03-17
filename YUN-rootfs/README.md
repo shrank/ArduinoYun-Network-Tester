@@ -14,6 +14,7 @@ The script radically removes some things I think are not needed on a Network-Tes
 * removes many modules from startup
 * removes many services from startup
 * removes some files and folders
+* preinstalls some software packages
 
 You might want to checkout the build.sh script for more details.
 

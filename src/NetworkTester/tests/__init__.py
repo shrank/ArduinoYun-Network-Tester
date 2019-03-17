@@ -1,5 +1,10 @@
 import time
 
+class result:
+	OFF=1
+	FAIL=2
+	WARN=3
+	OK=4
 
 class genericTest:
 	def __init__(self):
@@ -40,16 +45,16 @@ class testTime():
 	def testTime(self,Warn,Error,Off):
 		w=time.time()-self.warn
 		if(w<self.warntime):
-			return 3
+			return result.WARN
 		t=time.time()-self.last
 		if(Off !=None and t>Off):
-			return 1
+			return result.OFF
 		if(Error !=None and t>Error):
-			return 2
+			return result.FAIL
 		if(Warn !=None and t>Warn):
 			self.warn=time.time()
-			return 3
-		return 4
+			return result.WARN
+		return result.OK
 
 class testSource():
 	def __init__(self):
@@ -65,9 +70,9 @@ class testSource():
 	def testSource(self):
 		w=time.time()-self.warn
 		if(w<self.warntime):
-			return 3
+			return result.WARN
 		if(self.change):
 			self.warn=time.time()
 			self.change=False
-			return 3
-		return 4
+			return result.WARN
+		return result.OK

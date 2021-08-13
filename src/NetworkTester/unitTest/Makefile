@@ -1,4 +1,4 @@
-python= python
+python= python2
 tests=	testSource\
 	testTime\
 	dante\

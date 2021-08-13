@@ -26,6 +26,16 @@ class TestTime(unittest.TestCase):
 		self.assertTrue(a.testTime(10,11,11)==result.WARN)
 		time.sleep(1)
 		self.assertTrue(a.testTime(10,11,11)==result.OK)
+	def test_parseWarnNoError(self):
+		a=testTime()
+		a.read(None,{})
+		self.assertTrue(a.testTime(10,None,11)==result.OK)
+		self.assertTrue(a.testTime(0,None,1)==result.WARN)
+		self.assertTrue(a.testTime(10,None,11)==result.WARN)
+		time.sleep(0.9)
+		self.assertTrue(a.testTime(10,None,11)==result.WARN)
+		time.sleep(1)
+		self.assertTrue(a.testTime(10,None,11)==result.OK)
 
 
 if __name__ == '__main__':

@@ -2,7 +2,7 @@ import time
 import unittest
 import sys
 sys.path.insert(0,"../")
-from tests import Audio
+from tests import Audio, result
 
 class TestStatusPkt(unittest.TestCase):
 
@@ -10,18 +10,18 @@ class TestStatusPkt(unittest.TestCase):
 		data="\x00\x01\x00\x01\x5f\x44\x46\x4c\x54\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01\x01\x00\x1d\xc1\x0e\xff\xac\x00\x01\x00\xff\x00\x00\x00\x0c\x00\x00\x00\x00\x00\x00\x06\x18\x29\x42\xcb\x54\x00\x00\x00\x00\x00\x01\x00\x1d\xc1\x0e\xff\xac\x00\x00\x00\xff\x00\x00\x00\x79\x44\x46\x4c\x54\xff\xff\xf0\x60\x00\x00\x00\x01\xff\xff\xff\xfe\xff\xff\xf0\x60\x00\x00\x00\x00\x00\x00\x00\x79\x44\x46\x4c\x54\x00\x01\x00\x1d\xc1\x0e\xff\xac\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00"
 		a=Audio.testPTP()
 		a.read(data,["192.168.1.1",1039])
-		self.assertTrue(a.test()==4)
+		self.assertTrue(a.test()==result.OK)
 		time.sleep(1.1)
-		self.assertTrue(a.test()==2)
+		self.assertTrue(a.test()==result.FAIL)
 		time.sleep(1.1)
-		self.assertTrue(a.test()==1)
+		self.assertTrue(a.test()==result.OFF)
 		a.read(data,["192.168.1.1",1039])
-		self.assertTrue(a.test()==4)
+		self.assertTrue(a.test()==result.OK)
 		a.read(data,["192.168.1.2",1039])
-		self.assertTrue(a.test()==3)
+		self.assertTrue(a.test()==result.WARN)
 		time.sleep(1.1)
 		a.read(data,["192.168.1.2",1039])
-		self.assertTrue(a.test()==4)
+		self.assertTrue(a.test()==result.OK)
 
 
 	def test_parse2(self):
@@ -35,7 +35,7 @@ class TestStatusPkt(unittest.TestCase):
 		a=Audio.testPTP()
 		a.read(data,["192.168.1.2",1039])
 		print(a.test())
-		self.assertTrue(a.test()<=1)
+		self.assertTrue(a.test()<=result.OFF)
 
 
 

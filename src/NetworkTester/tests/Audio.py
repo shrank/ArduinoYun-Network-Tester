@@ -1,8 +1,8 @@
 try:
-	from tests import mcastTest,bcastTest,testTime,testSource
+	from tests import mcastTest,bcastTest,testTime,testSource, result
 	from netPkg import pkg
 except:
-	from NetworkTester.tests import mcastTest,bcastTest,testTime,testSource
+	from NetworkTester.tests import mcastTest,bcastTest,testTime,testSource, result
 	from NetworkTester.netPkg import pkg
 
 
@@ -23,12 +23,12 @@ class testDante(testTime,mcastTest):
 			testTime.read(self,data,srv)
 			self.source=srv[0]
 	def test(self):
-		res=self.testTime(1,None,2)
-		if(res<4):
-			return res
+		res=self.testTime(None,None,1)
+		if(res==result.OFF):
+			return result.OFF
 		if(self.source[0:4]=="172."):
-			return 2
-		return 4
+			return result.FAIL
+		return result.OK
 
 class testPTP(testTime,testSource,mcastTest):
 	def __init__(self):

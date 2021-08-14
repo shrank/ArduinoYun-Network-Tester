@@ -74,12 +74,14 @@ class mcastReceiver:
 		i=[]
 		for a in self.sock:
 			i.append(a[0])
-		readable, writable, exceptional = select.select(i, [], [],timeout)
-		for s in readable:
-			for a in self.sock:
-				if(s==a[0]):
-					data, srv_sock = s.recvfrom(2000)              # Receive data (blocking)
-					a[1](data,srv_sock)
+		for n in range(100):
+			readable, writable, exceptional = select.select(i, [], [],timeout)
+			timeout=0
+			for s in readable:
+				for a in self.sock:
+					if(s==a[0]):
+						data, srv_sock = s.recvfrom(2000)              # Receive data (blocking)
+						a[1](data,srv_sock)
 
 class externalCmdRunner:
 	def __init__(self):
